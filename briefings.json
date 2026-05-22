@@ -3,32 +3,51 @@
     "date": "2026-05-22",
     "youtube": [
       {
-        "title": "The AI Tools I Actually Use Every Day (2026) – Matt Wolfe",
-        "summary": "Wolfe bruker fire verktøy i daglig rotasjon: Claude til skrivejobber og analyse, ChatGPT til raske oppgaver og bildegenerering, Gemini via NotebookLM til å bearbeide lange dokumenter og podcaster, og Cursor til kodeassistanse. Kjerneteknikken er å ha et fast sett med verktøy fremfor å teste nytt hele tiden – ett verktøy per oppgavetype, ikke ett verktøy til alt.",
+        "creator": "Matt Wolfe",
+        "headline": "anbefaler å velge ett verktøy per oppgavetype fremfor å jage alt nytt",
+        "reason": "han brukte måneder på å hoppe mellom verktøy og oppdaget at verktøytretthet koster mer produktivitet enn det sparer",
+        "context": "Wolfe har testet hundrevis av KI-verktøy og konkluderer med at «tool fatigue» — det å alltid jage det nyeste — er det største produktivitetstapet folk ikke snakker om.",
+        "technique": "Claude til skrivejobber og analyse, ChatGPT til raske engangsspørsmål og bildegenerering, Gemini/NotebookLM til å bearbeide lange dokumenter og podcaster, Cursor til kodeassistanse. Ett verktøy per oppgave, ikke ett verktøy til alt.",
+        "forKunder": "En rådgiver som skal sette seg inn i en ny kundes bransje: bruk Perplexity til bakgrunnsinfo, lim inn i Claude og si «finn hullene og lag en briefing». To verktøy, én jobb, ferdig på minutter.",
+        "tip": "Skriv ned hvilken oppgave hvert KI-verktøy ditt skal løse. Neste gang du åpner ChatGPT eller Claude: velg bevisst — bruk riktig verktøy til riktig jobb.",
         "url": "https://www.youtube.com/watch?v=SlRzTFx8Qtg"
       },
       {
-        "title": "The Rise of WebMCP – Sam Witteveen",
-        "summary": "WebMCP er en utvidelse av MCP-protokollen som lar AI-agenter kommunisere direkte med nettsider via en standardisert grensesnittprotokoll – uten å skrape HTML. Prinsippet: nettsider eksponerer et maskinlesbart endepunkt, og agenten kaller dette direkte som et API. Praktisk konsekvens: agenter kan fylle skjemaer, lese dynamisk innhold og navigere flytbaserte grensesnitt uten å trenge Playwright eller Selenium.",
+        "creator": "Sam Witteveen",
+        "headline": "forklarer WebMCP — standarden som lar KI-agenter snakke direkte med nettsider uten å skrape HTML",
+        "reason": "dagens agenter bruker skraping og bildeanalyse for å «se» nettsider, noe som er skjørt og upålitelig",
+        "context": "MCP (Model Context Protocol) er allerede etablert som standarden for å koble KI-agenter til verktøy og databaser. WebMCP er neste steg: det samme prinsippet, men for nettsider.",
+        "technique": "Nettsider eksponerer et maskinlesbart endepunkt. Agenten kaller dette direkte som et API — fyller skjemaer, leser dynamisk innhold og navigerer flytbaserte grensesnitt uten å «se» siden visuelt.",
+        "forKunder": "En konsulent som bruker KI-agenter til å hente informasjon fra kundeportaler eller fagsystemer: WebMCP gjør agenten mer pålitelig, fordi den ikke lenger er avhengig av at siden ser riktig ut.",
+        "tip": "Sjekk om verktøyene du bruker allerede støtter MCP. Claude Desktop, Cursor og mange andre har MCP innebygd — da er du ett steg fra å koble til WebMCP-kompatible tjenester.",
         "url": "https://www.youtube.com/watch?v=c2IBZlFBcgs"
       },
       {
-        "title": "Claude Code Tips I Wish I'd Had From Day One – Marmelab",
-        "summary": "Tre konkrete teknikker: (1) Bruk plan-modus før all kompleks kode – la Claude legge frem fremgangsmåten og godkjenn den før implementering. (2) Gjør et retrospektiv på slutten av hver sesjon: spør Claude hva det lærte, og skriv funnene inn i CLAUDE.md. (3) Bruk ESC ESC i stedet for å fortsette når Claude er på feil spor – feil kontekst forplanter seg og ødelegger hele sesjonen.",
+        "creator": "Marmelab",
+        "headline": "deler tre Claude Code-teknikker som handler om kontekststyring, ikke prompting",
+        "reason": "de oppdaget at de vanligste feilene med KI-koding ikke skyldes dårlige prompts, men at KI-en jobber uten godkjent plan",
+        "context": "Marmelab er et teknologibyrå som har brukt Claude Code intensivt og dokumentert hva som faktisk virker — og hva som koster tid.",
+        "technique": "(1) Plan-modus før all kompleks kode: la KI-en legge frem planen og godkjenn den før den produserer. (2) Retrospektiv på slutten av hver sesjon: spør «hva lærte du?» og lagre funnene. (3) Avbryt tidlig med ESC ESC — feil kontekst forplanter seg og ødelegger hele sesjonen.",
+        "forKunder": "Disse prinsippene gjelder for alle som bruker KI til å skrive dokumenter, analyser eller presentasjoner: bekreft retning FØR KI-en produserer, og avbryt tidlig hvis noe er feil — ikke la det rulle videre.",
+        "tip": "Neste gang du gir Claude en lengre jobb: start med «Hva er din plan for å løse dette?». Les planen. Si «fortsett» bare når du er enig.",
         "url": "https://marmelab.com/blog/2026/04/24/claude-code-tips-i-wish-id-had-from-day-one.html"
       },
       {
-        "title": "The Last Six Months in LLMs in Five Minutes – Simon Willison (PyCon US 2026)",
-        "summary": "Åpne modeller som Qwen3-35B (21 GB) kjører nå på vanlige laptoper og leverer nær frontier-kvalitet – et reelt alternativ for workflows med sensitive data. Willisons viktigste poeng: benchmarks er ikke lenger nyttige for å velge modell. Lag dine egne tester basert på dine egne oppgaver.",
+        "creator": "Simon Willison",
+        "headline": "viser at åpne KI-modeller nå kjører på vanlige laptoper og leverer nær toppkvalitet",
+        "reason": "de siste seks månedene har fundamentalt endret hva som er mulig uten å sende data til skytjenester",
+        "context": "Willison er en av de mest siterte stemmene i åpen KI-utvikling. Foredraget er fra PyCon US 2026 og oppsummerer de viktigste skiftene på seks måneder — komprimert til fem minutter.",
+        "technique": "Qwen3-35B (21 GB) kjører lokalt på en vanlig laptop og leverer nær frontier-kvalitet. For workflows med sensitive data er dette nå et reelt alternativ til å sende alt til OpenAI eller Anthropic.",
+        "forKunder": "Konsulenter som håndterer sensitive kundedata — kontrakter, personopplysninger, forretningsstrategier — kan bruke KI til analyse uten at dataene forlater maskinen. GDPR-risikoen reduseres vesentlig.",
+        "tip": "Ikke stol på benchmarks for å velge KI-modell. Lag dine egne tester: lim inn tre reelle eksempler fra din hverdag og se hvilken modell som gjør jobben best for deg.",
         "url": "https://simonwillison.net/2026/May/19/5-minute-llms/"
       }
     ],
     "news": [
-      "Spesifikasjon-først er blitt standard i AI-kodingsworkflow: lag en spec.md med krav og arkitektur FØR du starter å kode – dette er det enkeltgrepet Addy Osmani, Marmelab og Anthropic sin egen dokumentasjon er enige om.",
-      "Agent-bygging i 2026 krever seks kjernefiler fra start: AGENTS.md, TASK.md, MEMORY.md, TOOLS.md, EVALS.md og RUN_LOG.md – uten disse mister agenten kontekst mellom kjøringer.",
-      "Kontekst slår prompting: å gi modellen riktig kontekst (kodebase, API-dokumentasjon, eksempler) via verktøy som Context7 gir større kvalitetshopp enn å finpusse selve prompten.",
-      "Writer-critic er den mest pålitelige agent-arkitekturen for innhold: én agent skriver, en annen reviewer med definerte kriterier, utkastet returneres til skribenten til det er godkjent – ingen menneskelig involvering i loopen."
-    ],
-    "tip": "Prøv meta-prompting neste gang du skal lage et dokument: i stedet for å be Claude skrive direkte, start med «Hvilke 10 spørsmål trenger du svar på for å lage et utmerket [dokument/analyse] om [tema]?». La Claude stille spørsmålene, svar på dem, og be den skrive basert på svarene. Tar under 10 minutter og resultatet er markant mer treffsikkert fordi modellen har fått konteksten den trenger."
+      "Spesifikasjon-først er blitt standard i AI-kodingsworkflow: lag en spec.md med krav og arkitektur FØR du starter å kode — dette er det enkeltgrepet Addy Osmani, Marmelab og Anthropics dokumentasjon er enige om.",
+      "Åpne modeller truer skytjenestenes monopol: Qwen3-35B kjører på en vanlig laptop og leverer nær frontier-kvalitet — relevant for alle som håndterer sensitiv informasjon.",
+      "Kontekst slår prompting: å gi modellen riktig bakgrunn (kodebase, dokumentasjon, eksempler) gir større kvalitetshopp enn å finpusse selve prompten.",
+      "Writer-critic er den mest pålitelige agentarkitekturen for innhold: én agent skriver, en annen reviewer med definerte kriterier, utkastet returneres til skribenten til det er godkjent."
+    ]
   }
 ]
