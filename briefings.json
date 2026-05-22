@@ -48,6 +48,18 @@
       "Åpne modeller truer skytjenestenes monopol: Qwen3-35B kjører på en vanlig laptop og leverer nær frontier-kvalitet — relevant for alle som håndterer sensitiv informasjon.",
       "Kontekst slår prompting: å gi modellen riktig bakgrunn (kodebase, dokumentasjon, eksempler) gir større kvalitetshopp enn å finpusse selve prompten.",
       "Writer-critic er den mest pålitelige agentarkitekturen for innhold: én agent skriver, en annen reviewer med definerte kriterier, utkastet returneres til skribenten til det er godkjent."
-    ]
+    ],
+    "glossary": {
+      "MCP": "Model Context Protocol — en åpen standard fra Anthropic som lar KI-agenter koble seg til verktøy, databaser og tjenester på en standardisert måte.",
+      "WebMCP": "En utvidelse av MCP-protokollen som lar KI-agenter kommunisere direkte med nettsider via et maskinlesbart grensesnitt, uten å skrape HTML.",
+      "NotebookLM": "Googles KI-verktøy for å laste opp og analysere lange dokumenter, PDF-er og lydfiler. Kan også lage podcastlignende oppsummeringer.",
+      "Qwen3": "En åpen KI-modell fra Alibaba som kan lastes ned og kjøres lokalt på din egen maskin — uten å sende data til skyen.",
+      "Perplexity": "En KI-drevet søkemotor som gir svar med referanser til kildene. Brukes gjerne til rask research og faktasjekk.",
+      "Cursor": "En kode-editor med KI-assistanse integrert direkte i arbeidsflaten. Lar deg skrive og endre kode ved å beskrive hva du vil.",
+      "Claude Code": "Anthropics terminalbaserte KI-kodingsassistent som jobber direkte i filsystemet ditt — kan lese, skrive og kjøre kode autonomt.",
+      "frontier": "«Frontier-kvalitet» betyr toppen av KI-ytelse — nivået til de beste kommersielle modellene fra OpenAI og Anthropic.",
+      "spec.md": "En spesifikasjonsfil som beskriver krav og arkitektur for et prosjekt. Skrives før man starter å kode, slik at KI-en har en godkjent plan å jobbe etter.",
+      "writer-critic": "En agentarkitektur der én KI-agent skriver innhold og en annen evaluerer det mot definerte kriterier — iterativt, uten menneskelig involvering i loopen."
+    }
   }
 ]

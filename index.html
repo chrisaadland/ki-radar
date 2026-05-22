@@ -42,10 +42,8 @@
 
     /* ── Header ── */
     .header {
-      padding: 48px 0 20px;
-      margin-bottom: 4px;
+      padding: 48px 0 24px;
     }
-
     .header-eyebrow {
       font-size: 11px;
       font-weight: 600;
@@ -54,32 +52,19 @@
       text-transform: uppercase;
       margin-bottom: 6px;
     }
-
-    .header-date {
-      font-size: 26px;
-      font-weight: 600;
-      color: var(--text);
-      line-height: 1.2;
-    }
-
-    .header-date .weekday {
-      display: block;
+    .header-weekday {
       font-size: 14px;
       font-weight: 500;
       color: var(--muted);
       margin-bottom: 2px;
     }
-
-    /* ── Divider ── */
-    .divider {
-      height: 1px;
-      background: var(--border);
-      margin: 24px 0;
+    .header-date {
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--text);
     }
 
-    /* ── Section ── */
-    .section { margin-bottom: 8px; }
-
+    /* ── Section label ── */
     .section-label {
       display: flex;
       align-items: center;
@@ -89,60 +74,141 @@
       color: var(--muted);
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      margin-bottom: 14px;
+      margin-bottom: 4px;
     }
 
-    /* ── YouTube items ── */
-    .yt-list { display: flex; flex-direction: column; gap: 2px; }
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 28px 0;
+    }
 
+    /* ── YouTube accordion ── */
     .yt-item {
-      padding: 14px 0;
       border-bottom: 1px solid var(--border);
     }
-    .yt-item:last-child { border-bottom: none; }
+    .yt-item:last-child {
+      border-bottom: none;
+    }
 
-    .yt-insight {
+    .yt-trigger {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 16px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .yt-trigger-text {
+      flex: 1;
+    }
+
+    .yt-summary-line {
       font-size: 15px;
       color: var(--text);
-      line-height: 1.65;
-      margin-bottom: 10px;
+      line-height: 1.55;
     }
 
-    .yt-meta {
+    .yt-summary-line strong {
+      font-weight: 600;
+    }
+
+    .yt-expand-hint {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 4px;
     }
 
-    .yt-title {
-      font-size: 12px;
-      font-weight: 500;
+    .yt-chevron {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
       color: var(--muted);
-      flex: 1;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      margin-top: 3px;
+      transition: transform 0.2s ease;
     }
 
-    .yt-link {
+    .yt-item.open .yt-chevron {
+      transform: rotate(180deg);
+    }
+
+    .yt-item.open .yt-expand-hint {
+      display: none;
+    }
+
+    /* ── Accordion body ── */
+    .yt-body {
+      display: none;
+      padding-bottom: 16px;
+    }
+    .yt-item.open .yt-body {
+      display: block;
+    }
+
+    .yt-block {
+      margin-bottom: 14px;
+    }
+    .yt-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .yt-block-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .yt-block-text {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .yt-block.tip .yt-block-text {
+      background: var(--subtle);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      border-left: 3px solid var(--accent);
+    }
+
+    .yt-source {
+      display: inline-block;
+      margin-top: 12px;
       font-size: 12px;
       color: var(--muted);
       text-decoration: none;
-      flex-shrink: 0;
       transition: color 0.15s;
     }
-    .yt-link:hover { color: var(--text); }
+    .yt-source:hover { color: var(--text); }
 
     /* ── News ── */
-    .news-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+    .news-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+    }
 
     .news-item {
       font-size: 15px;
       color: var(--text);
       line-height: 1.6;
-      padding: 5px 0 5px 20px;
+      padding: 7px 0 7px 20px;
       position: relative;
+      border-bottom: 1px solid var(--border);
     }
+    .news-item:last-child { border-bottom: none; }
+
     .news-item::before {
       content: '–';
       position: absolute;
@@ -150,47 +216,26 @@
       color: var(--muted);
     }
 
-    /* ── Tip ── */
-    .tip-card {
-      background: var(--subtle);
-      border-radius: var(--radius);
-      padding: 16px 18px;
-      border-left: 3px solid var(--accent);
-    }
-
-    .tip-text {
-      font-size: 15px;
-      color: var(--text);
-      line-height: 1.65;
-    }
-
-    /* ── Empty/loading ── */
-    .state-message {
+    /* ── Empty ── */
+    .state-msg {
       text-align: center;
-      padding: 80px 0 40px;
+      padding: 80px 0;
       color: var(--muted);
       font-size: 15px;
     }
-    .state-message span {
-      display: block;
-      font-size: 32px;
-      margin-bottom: 12px;
-    }
+    .state-msg span { display: block; font-size: 32px; margin-bottom: 12px; }
 
     /* ── Bottom nav ── */
     .bottom-nav {
       position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(250, 250, 249, 0.92);
+      bottom: 0; left: 0; right: 0;
+      background: rgba(250,250,249,0.93);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-top: 1px solid var(--border);
       padding: 10px 20px;
       padding-bottom: calc(10px + env(safe-area-inset-bottom));
     }
-
     .nav-inner {
       max-width: 640px;
       margin: 0 auto;
@@ -215,14 +260,45 @@
       transition: background 0.15s, color 0.15s;
       -webkit-tap-highlight-color: transparent;
     }
+    .nav-chip.active { background: var(--accent); color: #fff; }
+    .nav-chip:not(.active):active { background: var(--border); }
 
-    .nav-chip.active {
-      background: var(--accent);
-      color: #fff;
+    /* ── Glossary tooltips ── */
+    .term {
+      border-bottom: 1.5px dotted var(--muted);
+      cursor: help;
+      position: relative;
+      display: inline;
     }
 
-    .nav-chip:not(.active):active {
-      background: var(--border);
+    .term::after {
+      content: attr(data-def);
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: #2A2A27;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.55;
+      letter-spacing: 0;
+      text-transform: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      width: max-content;
+      max-width: min(260px, 85vw);
+      white-space: normal;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+      z-index: 200;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    }
+
+    .term:hover::after,
+    .term.active::after {
+      opacity: 1;
     }
   </style>
 </head>
@@ -230,10 +306,8 @@
   <div class="app">
     <header class="header">
       <div class="header-eyebrow">KI-radar</div>
-      <div class="header-date">
-        <span class="weekday" id="weekday"></span>
-        <span id="dateText">Laster...</span>
-      </div>
+      <div class="header-weekday" id="weekday"></div>
+      <div class="header-date" id="dateText">Laster...</div>
     </header>
     <div id="content"></div>
   </div>
@@ -243,30 +317,30 @@
   </nav>
 
   <script>
-    let briefings = [];
-    let current = 0;
-
     const DAYS = ['søndag','mandag','tirsdag','onsdag','torsdag','fredag','lørdag'];
     const MONTHS = ['januar','februar','mars','april','mai','juni','juli','august','september','oktober','november','desember'];
 
-    function parseDate(str) {
-      const [y, m, d] = str.split('-').map(Number);
-      return new Date(y, m - 1, d);
+    function parseDate(s) {
+      const [y,m,d] = s.split('-').map(Number);
+      return new Date(y, m-1, d);
     }
-
-    function fmtLong(str) {
-      const d = parseDate(str);
+    function fmtLong(s) {
+      const d = parseDate(s);
       return `${d.getDate()}. ${MONTHS[d.getMonth()]} ${d.getFullYear()}`;
     }
-
-    function fmtWeekday(str) {
-      return DAYS[parseDate(str).getDay()];
-    }
-
-    function fmtShort(str) {
-      const d = parseDate(str);
+    function fmtWeekday(s) { return DAYS[parseDate(s).getDay()]; }
+    function fmtShort(s) {
+      const d = parseDate(s);
       return `${d.getDate()}. ${MONTHS[d.getMonth()].slice(0,3)}`;
     }
+
+    function esc(s) {
+      return String(s||'')
+        .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+        .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    let briefings = [], current = 0;
 
     function render(index) {
       current = index;
@@ -277,63 +351,117 @@
 
       let html = '';
 
+      // YouTube section
       if (b.youtube?.length) {
-        html += `<section class="section">
-          <div class="section-label"><span>📺</span> YouTube</div>
-          <div class="yt-list">`;
-        b.youtube.forEach(v => {
-          html += `<div class="yt-item">
-            <div class="yt-insight">${esc(v.summary)}</div>
-            <div class="yt-meta">
-              <span class="yt-title">${esc(v.title)}</span>
-              <a class="yt-link" href="${esc(v.url)}" target="_blank" rel="noopener">Se video →</a>
+        html += `<div class="section-label"><span>📺</span> Fra YouTube-sfæren</div>
+        <div class="yt-list">`;
+
+        b.youtube.forEach((v, i) => {
+          html += `<div class="yt-item" id="yt-${index}-${i}">
+            <button class="yt-trigger" onclick="toggleYt('yt-${index}-${i}')">
+              <div class="yt-trigger-text">
+                <div class="yt-summary-line">
+                  <strong>${esc(v.creator)}</strong> ${esc(v.headline)} fordi ${esc(v.reason)}.
+                </div>
+                <div class="yt-expand-hint">Les mer ↓</div>
+              </div>
+              <svg class="yt-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M5 7.5l5 5 5-5"/>
+              </svg>
+            </button>
+            <div class="yt-body">`;
+
+          if (v.context) html += `
+              <div class="yt-block">
+                <div class="yt-block-label">Bakgrunn</div>
+                <div class="yt-block-text">${esc(v.context)}</div>
+              </div>`;
+
+          if (v.technique) html += `
+              <div class="yt-block">
+                <div class="yt-block-label">Teknikken</div>
+                <div class="yt-block-text">${esc(v.technique)}</div>
+              </div>`;
+
+          if (v.forKunder) html += `
+              <div class="yt-block">
+                <div class="yt-block-label">For kundene dine</div>
+                <div class="yt-block-text">${esc(v.forKunder)}</div>
+              </div>`;
+
+          if (v.tip) html += `
+              <div class="yt-block tip">
+                <div class="yt-block-label">Prøv i dag</div>
+                <div class="yt-block-text">${esc(v.tip)}</div>
+              </div>`;
+
+          html += `
+              <a class="yt-source" href="${esc(v.url)}" target="_blank" rel="noopener">Se video →</a>
             </div>
           </div>`;
         });
-        html += `</div></section><div class="divider"></div>`;
+
+        html += `</div>`;
       }
 
+      // News section
       if (b.news?.length) {
-        html += `<section class="section">
-          <div class="section-label"><span>📰</span> Nytt fra feltet</div>
-          <ul class="news-list">`;
+        html += `<div class="divider"></div>
+        <div class="section-label"><span>📰</span> Nytt fra feltet</div>
+        <ul class="news-list">`;
         b.news.forEach(n => {
           html += `<li class="news-item">${esc(n)}</li>`;
         });
-        html += `</ul></section><div class="divider"></div>`;
+        html += `</ul>`;
       }
 
-      if (b.tip) {
-        html += `<section class="section">
-          <div class="section-label"><span>💡</span> Én ting å prøve</div>
-          <div class="tip-card"><div class="tip-text">${esc(b.tip)}</div></div>
-        </section>`;
-      }
+      if (!html) html = `<div class="state-msg"><span>☕</span>Første briefing kommer snart.</div>`;
 
-      if (!html) {
-        html = `<div class="state-message"><span>🤔</span>Ingen innhold for denne dagen.</div>`;
-      }
-
-      document.getElementById('content').innerHTML = html;
+      document.getElementById('content').innerHTML = wrapGlossary(html, b.glossary || {});
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      document.querySelectorAll('.nav-chip').forEach((c, i) => {
+      document.querySelectorAll('.nav-chip').forEach((c,i) => {
         c.classList.toggle('active', i === index);
       });
     }
 
-    function renderNav() {
-      document.getElementById('navChips').innerHTML = briefings
-        .map((b, i) => `<button class="nav-chip${i === 0 ? ' active' : ''}" onclick="render(${i})">${fmtShort(b.date)}</button>`)
-        .join('');
+    function toggleYt(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('open');
     }
 
-    function esc(str) {
-      return String(str)
-        .replace(/&/g,'&amp;')
-        .replace(/</g,'&lt;')
-        .replace(/>/g,'&gt;')
-        .replace(/"/g,'&quot;');
+    function wrapGlossary(html, glossary) {
+      if (!glossary || !Object.keys(glossary).length) return html;
+      const terms = Object.keys(glossary).sort((a, b) => b.length - a.length);
+      const pattern = terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+      const re = new RegExp('\\b(' + pattern + ')\\b', 'gi');
+      return html.replace(/>([^<]+)</g, (_, text) => {
+        if (!text.trim()) return '>' + text + '<';
+        const out = text.replace(re, match => {
+          const key = terms.find(k => k.toLowerCase() === match.toLowerCase()) || match;
+          const def = (glossary[key] || '').replace(/"/g, '&quot;');
+          return '<span class="term" data-def="' + def + '">' + match + '</span>';
+        });
+        return '>' + out + '<';
+      });
+    }
+
+    // Mobile: tap to show/hide tooltip
+    document.addEventListener('click', function(e) {
+      const term = e.target.closest('.term');
+      document.querySelectorAll('.term.active').forEach(t => {
+        if (t !== term) t.classList.remove('active');
+      });
+      if (term) {
+        e.stopPropagation();
+        term.classList.toggle('active');
+      }
+    });
+
+    function renderNav() {
+      document.getElementById('navChips').innerHTML = briefings
+        .map((b,i) => `<button class="nav-chip${i===0?' active':''}" onclick="render(${i})">${fmtShort(b.date)}</button>`)
+        .join('');
     }
 
     async function init() {
@@ -345,9 +473,9 @@
         renderNav();
         render(0);
       } catch {
-        document.getElementById('dateText').textContent = 'BriefBuddy';
+        document.getElementById('dateText').textContent = 'KI-radar';
         document.getElementById('content').innerHTML =
-          `<div class="state-message"><span>☕</span>Første briefing kommer snart.</div>`;
+          `<div class="state-msg"><span>☕</span>Første briefing kommer snart.</div>`;
       }
     }
 
