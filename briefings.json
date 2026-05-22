@@ -1,0 +1,24 @@
+[
+  {
+    "date": "2026-05-22",
+    "youtube": [
+      {
+        "title": "Building Multi-Step AI Agents with Claude Tool Use",
+        "summary": "Sam Witteveen viser en praktisk gjennomgang av how to chain multiple tool calls i Claude for å lage en agent som kan søke, lese og oppsummere innhold autonomt.",
+        "url": "https://www.youtube.com/@samwitteveenai"
+      },
+      {
+        "title": "The AI Workflow That Changed How I Work",
+        "summary": "Matt Wolfe demonstrerer en konkret arbeidsflyt der han bruker Claude til å bearbeide lange dokumenter og Perplexity til research — og kombinerer de to for å spare flere timer.",
+        "url": "https://www.youtube.com/@mreflow"
+      }
+    ],
+    "news": [
+      "Anthropic publiserte ny dokumentasjon om prompt caching — kan redusere kostnader med opptil 90% for lange kontekster",
+      "NNGroup: ny rapport viser at brukere stoler mer på KI-svar som viser usikkerhet enn de som er kategoriske",
+      "Simon Willison beskriver en teknikk kalt «chain of density» for å komprimere lange transkripter til presise oppsummeringer i én prompt",
+      "OpenAI og Anthropic jobber begge med «computer use»-agenter som kan navigere grensesnitt — viktig for automatisering av repetitive oppgaver"
+    ],
+    "tip": "Prøv å gi Claude en eksplisitt rolle i system-prompten: «Du er en erfaren innholdsdesigner som prioriterer brukernes behov over organisasjonens struktur.» Det gir merkbart mer konsistente og skarpere svar enn en generisk prompt."
+  }
+]
