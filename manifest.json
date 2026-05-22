@@ -1,7 +1,7 @@
 {
-  "name": "BriefBuddy",
-  "short_name": "BriefBuddy",
-  "description": "Daglig KI-briefing",
+  "name": "KI-radar",
+  "short_name": "KI-radar",
+  "description": "Daglig oversikt over smarte måter å jobbe med KI",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FAFAF9",
