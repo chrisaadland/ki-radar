@@ -3,22 +3,21 @@
     "date": "2026-05-22",
     "youtube": [
       {
-        "title": "Building Multi-Step AI Agents with Claude Tool Use",
-        "summary": "Sam Witteveen viser en praktisk gjennomgang av how to chain multiple tool calls i Claude for å lage en agent som kan søke, lese og oppsummere innhold autonomt.",
-        "url": "https://www.youtube.com/@samwitteveenai"
+        "title": "Matt Wolfe – The AI Workflow That Changed How I Work",
+        "summary": "Arbeidsflyt: Bruk Perplexity til innledende research og kopier funnene inn i Claude med prompten «Analyser dette, finn hull i argumentasjonen og lag en strukturert rapport». Nøkkelen er å la Perplexity gjøre breddesøk og Claude gjøre dybdeanalyse — ikke bruke ett verktøy til begge deler.",
+        "url": "https://www.youtube.com/@mreflow"
       },
       {
-        "title": "The AI Workflow That Changed How I Work",
-        "summary": "Matt Wolfe demonstrerer en konkret arbeidsflyt der han bruker Claude til å bearbeide lange dokumenter og Perplexity til research — og kombinerer de to for å spare flere timer.",
-        "url": "https://www.youtube.com/@mreflow"
+        "title": "Sam Witteveen – Building Multi-Step Agents with Tool Use",
+        "summary": "For å bygge en pålitelig agent: del oppgaven inn i eksplisitte steg i systempromptен, gi agenten ett verktøy per steg (ikke alle på én gang), og legg inn en «sjekk resultatet»-instruksjon mellom hvert steg. Dette reduserer hallusinering dramatisk fordi agenten validerer output underveis.",
+        "url": "https://www.youtube.com/@samwitteveenai"
       }
     ],
     "news": [
-      "Anthropic publiserte ny dokumentasjon om prompt caching — kan redusere kostnader med opptil 90% for lange kontekster",
-      "NNGroup: ny rapport viser at brukere stoler mer på KI-svar som viser usikkerhet enn de som er kategoriske",
-      "Simon Willison beskriver en teknikk kalt «chain of density» for å komprimere lange transkripter til presise oppsummeringer i én prompt",
-      "OpenAI og Anthropic jobber begge med «computer use»-agenter som kan navigere grensesnitt — viktig for automatisering av repetitive oppgaver"
+      "Chain of density: Gi Claude en lang tekst og be om et 200-ords sammendrag. Send sammendraget tilbake og si «Gjør dette tettere — behold all nøkkelinformasjon men fjern fyll». Gjenta 3–4 ganger for et presist sammendrag uten informasjonstap.",
+      "NNGroup: Brukere stoler mer på KI-svar som eksplisitt sier «jeg er usikker på dette» enn svar som er kategoriske. Praktisk konsekvens: be Claude alltid markere lav-konfidens-påstander.",
+      "Prompt caching i Claude API kan nå redusere kostnader med opptil 90% for lange kontekster — relevant hvis du sender samme system-prompt gjentatte ganger i en workflow."
     ],
-    "tip": "Prøv å gi Claude en eksplisitt rolle i system-prompten: «Du er en erfaren innholdsdesigner som prioriterer brukernes behov over organisasjonens struktur.» Det gir merkbart mer konsistente og skarpere svar enn en generisk prompt."
+    "tip": "Prøv «rollen-før-oppgaven»-teknikken: i stedet for å si hva du vil ha, si hvem Claude skal være først. «Du er en erfaren innholdsdesigner som prioriterer brukerens behov over avsenderens. Din oppgave er å...» gir konsekvent skarpere svar enn å hoppe rett til oppgaven."
   }
 ]
