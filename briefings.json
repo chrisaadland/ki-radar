@@ -3,21 +3,32 @@
     "date": "2026-05-22",
     "youtube": [
       {
-        "title": "Matt Wolfe – The AI Workflow That Changed How I Work",
-        "summary": "Arbeidsflyt: Bruk Perplexity til innledende research og kopier funnene inn i Claude med prompten «Analyser dette, finn hull i argumentasjonen og lag en strukturert rapport». Nøkkelen er å la Perplexity gjøre breddesøk og Claude gjøre dybdeanalyse — ikke bruke ett verktøy til begge deler.",
-        "url": "https://www.youtube.com/@mreflow"
+        "title": "The AI Tools I Actually Use Every Day (2026) – Matt Wolfe",
+        "summary": "Wolfe bruker fire verktøy i daglig rotasjon: Claude til skrivejobber og analyse, ChatGPT til raske oppgaver og bildegenerering, Gemini via NotebookLM til å bearbeide lange dokumenter og podcaster, og Cursor til kodeassistanse. Kjerneteknikken er å ha et fast sett med verktøy fremfor å teste nytt hele tiden – ett verktøy per oppgavetype, ikke ett verktøy til alt.",
+        "url": "https://www.youtube.com/watch?v=SlRzTFx8Qtg"
       },
       {
-        "title": "Sam Witteveen – Building Multi-Step Agents with Tool Use",
-        "summary": "For å bygge en pålitelig agent: del oppgaven inn i eksplisitte steg i systempromptен, gi agenten ett verktøy per steg (ikke alle på én gang), og legg inn en «sjekk resultatet»-instruksjon mellom hvert steg. Dette reduserer hallusinering dramatisk fordi agenten validerer output underveis.",
-        "url": "https://www.youtube.com/@samwitteveenai"
+        "title": "The Rise of WebMCP – Sam Witteveen",
+        "summary": "WebMCP er en utvidelse av MCP-protokollen som lar AI-agenter kommunisere direkte med nettsider via en standardisert grensesnittprotokoll – uten å skrape HTML. Prinsippet: nettsider eksponerer et maskinlesbart endepunkt, og agenten kaller dette direkte som et API. Praktisk konsekvens: agenter kan fylle skjemaer, lese dynamisk innhold og navigere flytbaserte grensesnitt uten å trenge Playwright eller Selenium.",
+        "url": "https://www.youtube.com/watch?v=c2IBZlFBcgs"
+      },
+      {
+        "title": "Claude Code Tips I Wish I'd Had From Day One – Marmelab",
+        "summary": "Tre konkrete teknikker: (1) Bruk plan-modus før all kompleks kode – la Claude legge frem fremgangsmåten og godkjenn den før implementering. (2) Gjør et retrospektiv på slutten av hver sesjon: spør Claude hva det lærte, og skriv funnene inn i CLAUDE.md. (3) Bruk ESC ESC i stedet for å fortsette når Claude er på feil spor – feil kontekst forplanter seg og ødelegger hele sesjonen.",
+        "url": "https://marmelab.com/blog/2026/04/24/claude-code-tips-i-wish-id-had-from-day-one.html"
+      },
+      {
+        "title": "The Last Six Months in LLMs in Five Minutes – Simon Willison (PyCon US 2026)",
+        "summary": "Åpne modeller som Qwen3-35B (21 GB) kjører nå på vanlige laptoper og leverer nær frontier-kvalitet – et reelt alternativ for workflows med sensitive data. Willisons viktigste poeng: benchmarks er ikke lenger nyttige for å velge modell. Lag dine egne tester basert på dine egne oppgaver.",
+        "url": "https://simonwillison.net/2026/May/19/5-minute-llms/"
       }
     ],
     "news": [
-      "Chain of density: Gi Claude en lang tekst og be om et 200-ords sammendrag. Send sammendraget tilbake og si «Gjør dette tettere — behold all nøkkelinformasjon men fjern fyll». Gjenta 3–4 ganger for et presist sammendrag uten informasjonstap.",
-      "NNGroup: Brukere stoler mer på KI-svar som eksplisitt sier «jeg er usikker på dette» enn svar som er kategoriske. Praktisk konsekvens: be Claude alltid markere lav-konfidens-påstander.",
-      "Prompt caching i Claude API kan nå redusere kostnader med opptil 90% for lange kontekster — relevant hvis du sender samme system-prompt gjentatte ganger i en workflow."
+      "Spesifikasjon-først er blitt standard i AI-kodingsworkflow: lag en spec.md med krav og arkitektur FØR du starter å kode – dette er det enkeltgrepet Addy Osmani, Marmelab og Anthropic sin egen dokumentasjon er enige om.",
+      "Agent-bygging i 2026 krever seks kjernefiler fra start: AGENTS.md, TASK.md, MEMORY.md, TOOLS.md, EVALS.md og RUN_LOG.md – uten disse mister agenten kontekst mellom kjøringer.",
+      "Kontekst slår prompting: å gi modellen riktig kontekst (kodebase, API-dokumentasjon, eksempler) via verktøy som Context7 gir større kvalitetshopp enn å finpusse selve prompten.",
+      "Writer-critic er den mest pålitelige agent-arkitekturen for innhold: én agent skriver, en annen reviewer med definerte kriterier, utkastet returneres til skribenten til det er godkjent – ingen menneskelig involvering i loopen."
     ],
-    "tip": "Prøv «rollen-før-oppgaven»-teknikken: i stedet for å si hva du vil ha, si hvem Claude skal være først. «Du er en erfaren innholdsdesigner som prioriterer brukerens behov over avsenderens. Din oppgave er å...» gir konsekvent skarpere svar enn å hoppe rett til oppgaven."
+    "tip": "Prøv meta-prompting neste gang du skal lage et dokument: i stedet for å be Claude skrive direkte, start med «Hvilke 10 spørsmål trenger du svar på for å lage et utmerket [dokument/analyse] om [tema]?». La Claude stille spørsmålene, svar på dem, og be den skrive basert på svarene. Tar under 10 minutter og resultatet er markant mer treffsikkert fordi modellen har fått konteksten den trenger."
   }
 ]
